@@ -1,0 +1,12 @@
+[package]
+name = "rust-euler"
+version = "0.1.0"
+authors = ["shmuel <shmuelhanoch@gmail.com>"]
+license = "MIT"
+repository = "git@github.com:shmuelhanoch/rust-euler.git"
+description = """
+Solving Project-Euler problems using the Rust language.
+"""
+
+[dependencies]
+itertools = "0.7.8"
