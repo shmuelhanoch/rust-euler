@@ -8,14 +8,22 @@
 // Actually, it's not so hard to solve it without a computer. But my current
 // motivation is to learn Rust :)
 
-#[macro_use] extern crate itertools;
+#[macro_use]
+extern crate itertools;
 
-fn is_palindrome(n: u64) -> bool {
+fn is_palindrome(n: &i32) -> bool {
     let s = n.to_string();
-    s == s.rev();
+    s == s.chars().rev().collect::<String>()
 }
 
 fn main() {
-    let n = iproduct!(100..1000, 100..1000).filter(is_palindrome).max();
-    println!(n);
+    let n_ = iproduct!(100..1000, 100..1000)
+        .map(|(x, y)| x * y)
+        .filter(is_palindrome)
+        .max();
+
+    match n_ {
+        Some(n) => println!("{}", n),
+        _ => unreachable!(),
+    }
 }
