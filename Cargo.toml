@@ -10,3 +10,4 @@ Solving Project-Euler problems using the Rust language.
 
 [dependencies]
 itertools = "0.7.8"
+mdo = "*"
