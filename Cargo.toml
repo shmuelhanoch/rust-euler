@@ -1,6 +1,7 @@
 [package]
-name = "rust-euler"
+name = "rust_euler"
 version = "0.1.0"
+edition = "2018"
 authors = ["shmuel <shmuelhanoch@gmail.com>"]
 license = "MIT"
 repository = "git@github.com:shmuelhanoch/rust-euler.git"
@@ -11,3 +12,5 @@ Solving Project-Euler problems using the Rust language.
 [dependencies]
 itertools = "0.7.8"
 mdo = "*"
+num = "0.4"
+tupletools = "0.3.0"
