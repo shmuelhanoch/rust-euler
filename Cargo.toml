@@ -14,3 +14,6 @@ itertools = "0.7.8"
 mdo = "*"
 num = "0.4"
 tupletools = "0.3.0"
+
+[profile.dev]
+opt-level = 3
