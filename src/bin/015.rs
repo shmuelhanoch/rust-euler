@@ -9,10 +9,6 @@
 // $(21*...*40) / 20!$
 // This representation turns out to fit in i128 without an overflow.
 
-fn main() -> () {
-    println!("{}", mul(21..41) / mul(1..21));
-}
-
-fn mul(it: impl Iterator<Item=i128>) -> i128 {
-    it.fold(1, |acc, x| acc * x)
+fn main() {
+    println!("{}", (21..41).product::<i128>() / (1..21).product::<i128>());
 }
